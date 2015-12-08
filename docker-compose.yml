@@ -1,0 +1,10 @@
+fluentd:
+  build: .
+  ports:
+    - "24224:24224"
+    # If you want to use fluent-plugin-secure-forward, uncomment follow line.
+    #- "24284:24284"
+  volumes:
+    - /var/lib/docker/containers:/var/lib/docker/containers
+    - /fluentd/log:/fluentd/log
+    - $PWD:/etc/fluent
