@@ -6,7 +6,7 @@ RUN apt-get update \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
-RUN gem install fluentd -v "~>0.12.17" --no-ri --no-rdoc
+RUN gem install fluentd -v "~>0.12.26" --no-ri --no-rdoc
 #RUN /usr/local/bin/gem install fluent-plugin-secure-forward --no-ri --no-rdoc
 
 RUN mkdir /etc/fluent
